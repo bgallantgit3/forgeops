@@ -114,6 +114,12 @@ ingress:
     nginx.ingress.kubernetes.io/cors-max-age: "600"
     nginx.ingress.kubernetes.io/rewrite-target: "/"
 
+# BLAIR added this value at the top level to be flat and easy use.
+# realmAlias: <set to the name of the realm DNS alias from AM>
+#
+# Example:
+# realmAlias: subscribers
+
 # Audit log details for log streaming sidecar containers.
 # AM can now stream audit logs to stdout. This option may be removed in the future.
 auditLogs: []

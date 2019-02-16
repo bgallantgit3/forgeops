@@ -22,3 +22,9 @@ etc/cert-manager.json
 /cicd/forgeops-tests/res.txt
 /cicd/forgeops-tests/results.txt
 /venv/
+helm/frconfig/secrets/id_rsa
+/helm/frconfig/secrets/id_rsa
+helm/frconfig/secrets/id_rsa.pub
+/helm/frconfig/secrets/id_rsa.pub
+helm/frconfig/secrets/BLAIR_README.md
+/helm/frconfig/secrets/BLAIR_README.md

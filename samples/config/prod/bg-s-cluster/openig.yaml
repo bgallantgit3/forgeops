@@ -1,0 +1,5 @@
+config:
+  name: frconfig
+  path: /git/config/6.5/cdm/m-cluster/ig
+  strategy: git
+

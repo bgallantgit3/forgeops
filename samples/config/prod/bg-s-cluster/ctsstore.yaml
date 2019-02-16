@@ -1,0 +1,12 @@
+instance: ctsstore
+
+userstore:
+  enabled: false
+
+ctsstore:
+  enabled: false
+
+idmRepo:
+  enabled: false
+
+

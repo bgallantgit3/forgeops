@@ -1,0 +1,11 @@
+instance: userstore
+
+cts:
+  enabled: false
+
+configstore:
+  enabled: false
+
+idmRepo:
+  enabled: false
+

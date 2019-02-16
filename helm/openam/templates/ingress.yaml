@@ -33,5 +33,17 @@ spec:
           backend:
             serviceName: {{ .Values.service.name }}
             servicePort: {{ .Values.service.externalPort }}
-
+    {{ if .Values.realmAlias }}
+    - host: {{ printf "%s.%s%s" .Values.realmAlias .Release.Namespace .Values.domain }}
+      http:
+        paths:
+        - path: /
+          backend:
+            serviceName: {{ .Values.service.name }}
+            servicePort: {{ .Values.service.externalPort }}
+        - path: /openam
+          backend:
+            serviceName: {{ .Values.service.name }}
+            servicePort: {{ .Values.service.externalPort }}
+    {{ end }}
 {{- end -}}
