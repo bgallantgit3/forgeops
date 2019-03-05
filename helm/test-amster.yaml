@@ -1,7 +1,7 @@
 domain: .example.com
 
 config:
-  importPath: /git/config/6.5/frudevops-myname/am/fec
+  importPath: /git/config/6.5/default/am/empty-import
 
 userStore:
   host: userstore-0.userstore
