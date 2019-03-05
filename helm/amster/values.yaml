@@ -14,9 +14,14 @@ domain: example.com
 subdomain: iam
 
 # Default install passwords.
-amadminPassword: password
-encryptionKey: "123456789012"
-policyAgentPassword: Passw0rd
+# If these are not set (example: helm install --set amadminPassword=foo amster) a random password
+# will be generated. The password can viewed using:
+# kubectl get configmaps amster-config -o yaml
+# You may wish to delete this configmap once you have saved the passwords. 
+apiVersion: v1
+# amadminPassword: password
+# encryptionKey: "123456789012"
+# policyAgentPassword: Passw0rd
 prometheusPassword: prometheus
 
 
@@ -36,7 +41,7 @@ config:
 
 image:
   repository: forgerock-docker-public.bintray.io/forgerock/amster
-  tag: 7.0.0
+  tag: 7.0.0-SNAPSHOT
   pullPolicy: IfNotPresent
   #pullPolicy: Always
 
@@ -63,9 +68,7 @@ configStore:
 # place for users when empty-import config is used.
 userStore:
   suffix: "ou=identities"
-  # If userstore is deployed as well but empty import configuration
-  # is used, override this to userstore-0.userstore to use that store
-  host: configstore-0.configstore
+  host: userstore-0.userstore
   port: 1389
   dirManager: "cn=Directory manager"
   password: "password"
